@@ -1,0 +1,77 @@
+###
+POST  http://localhost:1234/signup
+Content-Type: application/json
+
+{
+    "username":"dharun",
+    "password":"1234"
+}
+
+###
+POST  http://localhost:1234/signin
+Content-Type: application/json
+
+{
+    "username":"dharun",
+    "password":"1234"
+}
+
+####
+POST  http://localhost:1234/addresource
+Content-Type: application/json
+
+{
+    "resourceId": 09876543,
+    "resourceName": "Dharun",
+    "enrolledDate": "2024-07-18",
+    "coursename": "java",
+    "contact": "0987654321",
+    "email": "abc123@gmail.com",
+    "courseId": 123456789
+}
+
+####
+GET http://localhost:1234/getallresource
+
+####
+POST  http://localhost:1234/addcourse
+Content-Type: application/json
+
+{
+    "courseId": 1209,
+    "coursename": "Javascript",
+    "courseDuration": 5,
+    "coursePrerequisite":"no",
+    "courseExpert":"Dharun"
+}
+
+####
+GET http://localhost:1234/getallcourse
+
+
+
+####
+POST  http://localhost:1234/fetchresourcebycourse
+Content-Type: application/json
+
+{
+  "coursename": "Python"   
+}
+
+
+####
+POST  http://localhost:1234/fetchcoursebyexpert
+Content-Type: application/json
+
+{
+  "courseExpert": "Annamalai"   
+}
+
+####
+POST  http://localhost:1234/fetchresourcebydate
+Content-Type: application/json
+
+{
+   "enrolledDate": "20-10-2024"   
+}
+
