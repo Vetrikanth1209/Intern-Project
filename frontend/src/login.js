@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { callcred } from "./axios";
-import { useNavigate } from "react-router-dom";
 import { TextField, Button, Box, Container, Card, CardContent, Typography, InputAdornment } from "@mui/material";
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import Lock from '@mui/icons-material/Lock';
@@ -14,7 +13,7 @@ export const Login = () => {
     password: ""
   });
 
-  const nav = useNavigate();
+
 
   const collect = (eve) => {
     const { name, value } = eve.target;
@@ -29,7 +28,7 @@ export const Login = () => {
     alert(JSON.stringify(res));
     if (res.data) {
       sessionStorage.setItem("logged", JSON.stringify(users));
-      nav("/form");
+      window.location.assign("/")
     }
   };
 

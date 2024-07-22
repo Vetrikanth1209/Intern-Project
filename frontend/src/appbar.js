@@ -9,6 +9,11 @@ const Nav = () => {
     const toggleDrawer = () => {
         setDrawerOpen(!drawerOpen);
     };
+    const handleLogOut = () => {
+        sessionStorage.removeItem('logged');
+        window.location.assign("/")
+      };
+    
 
     return (
         <>
@@ -61,10 +66,7 @@ const Nav = () => {
                     </ListItem>
                     <Divider />
                     <ListItem button onClick={toggleDrawer}>
-                        <Button sx={{ width: '100%', justifyContent: 'flex-start' }} onClick={()=>{
-                            sessionStorage.removeItem('logged')
-                            nav('/')
-                        }}>
+                        <Button sx={{ width: '100%', justifyContent: 'flex-start' }} onClick={handleLogOut}>
                             <ListItemText primary="Log Out" />
                         </Button>
                     </ListItem>
